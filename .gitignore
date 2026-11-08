@@ -12,3 +12,4 @@ private/
 *.jpeg
 *.png
 *.pdf
+!docs/preview.png

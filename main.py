@@ -1,6 +1,7 @@
 # main.py FastAPI 极简后端演示Demo
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
+from pathlib import Path
 import uvicorn
 import sqlite3
 
@@ -29,10 +30,7 @@ conn.commit()
 
 @app.get("/", response_class=HTMLResponse)
 async def index():
-    return """
-    <h2>公益失物招领 Demo</h2>
-    <a href="/publish">发布捡到物品</a> | <a href="/search">查找遗失物</a>
-    """
+    return Path(__file__).with_name("index.html").read_text(encoding="utf-8")
 
 @app.get("/publish", response_class=HTMLResponse)
 async def publish_page():
