@@ -60,7 +60,6 @@ python -m pip install -r requirements.txt
 python -m uvicorn main:app --host 127.0.0.1 --port 8000
 ```
 
-
 `main.py` 保留原始演示代码，只有登记、简单检索和提交认领申请功能。它尚未实现身份认证、认领核验、匿名消息、图片脱敏、数据删除和状态流转，也存在输入校验、HTML 输出转义及列表字段对应等问题。直接运行 `python main.py` 会监听所有网络接口，因此本地演示请使用上述仅监听本机的命令。
 
 ## 开源协议
